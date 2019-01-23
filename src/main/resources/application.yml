@@ -1,0 +1,25 @@
+server:
+   port: 8088
+
+# 数据库配置
+deploy.datasource:
+  ip: localhost
+  dbname: shiro_test
+  username: root
+  password: 123456
+     
+   
+spring:
+   application:
+      name: shiro
+   datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://${deploy.datasource.ip}:3306/${deploy.datasource.dbname}?useSSL=false&useUnicode=true&characterEncoding=utf8&serverTimezone=UTC
+        username: ${deploy.datasource.username}
+        password: ${deploy.datasource.password}
+        type: com.alibaba.druid.pool.DruidDataSource
+ 
+mybatis:
+  # mybatis日志打印设置
+  configuration.log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapperLocations: classpath:mapper/*Mapper.xml
