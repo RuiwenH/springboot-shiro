@@ -21,6 +21,7 @@ import com.reven.service.IUserService;
 public class EnceladusShiroRealm extends AuthorizingRealm {
     @Autowired
     private IUserService userService;
+    @Autowired
     private ISysRoleService roleService;
 
     @Override

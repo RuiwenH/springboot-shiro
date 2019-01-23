@@ -1,4 +1,4 @@
-package config;
+package com.reven.config;
 import java.util.HashMap;
 import java.util.Map;
 
